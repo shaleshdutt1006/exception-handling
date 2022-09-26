@@ -4,22 +4,32 @@ package com.moodanalyser;
 public class MoodAnalyser {
 
 
-    private final String message;
+    private String message;
 
     /*
     taking MoodAnalyser input using MoodAnalyser Constructor
      */
     public MoodAnalyser(String Message) {
         this.message = Message;
+
     }
 
     public String analyseMood() {
+        /*
+        if there is nothing or null in message it should give happy but it shows nullPointer Exception
+         So we use try and catch for exception handling. if it is null then it gives happy using catch block
+         */
+        try {
+            if (message.contains(null)) {
+                return "Sad";
+            } else {
+                return "Happy";
+            }
 
-        if (message.contains("I am in sad mood")) {
-            return "Sad";
-
-        } else
+        } catch (NullPointerException e) {
             return "Happy";
+        }
+
 
     }
 
