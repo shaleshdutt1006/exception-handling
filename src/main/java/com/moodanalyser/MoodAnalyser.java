@@ -3,7 +3,7 @@ package com.moodanalyser;
 
 public class MoodAnalyser {
 
-    private String message;
+    private final String message;
 
     /*
     taking MoodAnalyser input using MoodAnalyser Constructor
@@ -15,7 +15,7 @@ public class MoodAnalyser {
 
     public String analyseMood(String message) throws MoodAnalysesException {
         /*
-        if there is nothing or null in message it should give happy but it throws nullPointer Exception
+        if there is nothing or null in message it should give happy, but it throws nullPointer Exception
          So we use try and catch for exception handling.
          */
         try {
