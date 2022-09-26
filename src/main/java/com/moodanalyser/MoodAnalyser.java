@@ -4,9 +4,18 @@ package com.moodanalyser;
 public class MoodAnalyser {
 
 
-    public String analyseMood(String message) {
+    private final String message;
 
-        if (message.contains("Sad")) {
+    /*
+    taking MoodAnalyser input using MoodAnalyser Constructor
+     */
+    public MoodAnalyser(String Message) {
+        this.message = Message;
+    }
+
+    public String analyseMood() {
+
+        if (message.contains("I am in sad mood")) {
             return "Sad";
 
         } else
