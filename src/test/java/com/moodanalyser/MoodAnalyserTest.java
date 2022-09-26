@@ -9,12 +9,14 @@ public class MoodAnalyserTest {
     /*
     Giving message using constructor of MoodAnalyser
      */
-    public void givenNullMood_ShouldReturnHappy() {
+    public void givenNullMood_ShouldThrowException() {
         MoodAnalyser moodAnalyser = new MoodAnalyser(null);
-        String mood = moodAnalyser.analyseMood();
-        Assertions.assertEquals("Happy", mood);
+        try {
+            moodAnalyser.analyseMood(null);
+        } catch (MoodAnalysesException e) {
+            Assertions.assertEquals("Please enter proper message", e.getMessage());
+        }
+
     }
-
-
 
 }

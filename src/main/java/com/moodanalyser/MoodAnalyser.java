@@ -3,7 +3,6 @@ package com.moodanalyser;
 
 public class MoodAnalyser {
 
-
     private String message;
 
     /*
@@ -14,10 +13,10 @@ public class MoodAnalyser {
 
     }
 
-    public String analyseMood() {
+    public String analyseMood(String message) throws MoodAnalysesException {
         /*
-        if there is nothing or null in message it should give happy but it shows nullPointer Exception
-         So we use try and catch for exception handling. if it is null then it gives happy using catch block
+        if there is nothing or null in message it should give happy but it throws nullPointer Exception
+         So we use try and catch for exception handling.
          */
         try {
             if (message.contains(null)) {
@@ -25,11 +24,10 @@ public class MoodAnalyser {
             } else {
                 return "Happy";
             }
-
         } catch (NullPointerException e) {
-            return "Happy";
-        }
 
+            throw new MoodAnalysesException("Please enter proper message");
+        }
 
     }
 
