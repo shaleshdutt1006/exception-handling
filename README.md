@@ -19,5 +19,5 @@ Analysis Errors.
 
 TestCase 3.1-Given NULL Mood Should Throw MoodAnalysisException
 
-TestCase 3.2-Given NULL Mood Should Throw MoodAnalysisException Should Throw MoodAnalysisException indicating Empty Mood Handle
+TestCase 4-Given NULL Mood Should Throw MoodAnalysisException Should Throw MoodAnalysisException indicating Empty Mood Handle
  Empty Mood Scenario throw MoodAnalysisException and inform user of the EmptyMood.
